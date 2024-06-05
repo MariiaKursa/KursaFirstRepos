@@ -1,11 +1,11 @@
-from modules.ui.page_objects.my_project import MyProject
+from modules.ui.page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
 
-class Search_and_Order(MyProject):
+class SearchAndOrder(BasePage):
     URL = "https://rozetka.com.ua/search/"
 
     def __init__(self) -> None:
         super().__init__()
     
     def go_to(self):
-        self.driver.get(Search_and_Order.URL)
+        self.driver.get(SearchAndOrder.URL)
