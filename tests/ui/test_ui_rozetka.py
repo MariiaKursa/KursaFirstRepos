@@ -14,8 +14,6 @@ def test_search_and_select():
 
     search_and_select.select_product
 
-    search_and_select.btn_search
-
     search_and_select.close
 
 

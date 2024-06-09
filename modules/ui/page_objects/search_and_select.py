@@ -1,6 +1,7 @@
 from modules.ui.page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+import time
 
 
 class SearchAndSelect(BasePage):
@@ -18,12 +19,12 @@ class SearchAndSelect(BasePage):
         inpute_product.send_keys(product_name)
 
     def select_product(self):
-
-        select = Select(self.driver.find_element(By.CLASS_NAME, "suggest-list"))
-        select.select_by_index("1")
+        element = self.driver.find_element(By.XPATH, "//li[@data-name='басейн каркасний']")
+        select = Select(element)
+        select.select_by_index(3)
+        select.select_by_visible_text('басейн дитячий')
+        
     
-    def btn_search(self):
-        btn = self.driver.find_element(By.XPATH, '/html/body/rz-app-root/div/div/rz-header/rz-main-header/header/div/div/div/rz-search-suggest/form/button')
-        btn.click
+    
 
-  
+ 

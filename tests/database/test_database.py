@@ -93,9 +93,9 @@ def test_count_function_by_products_id():
 
 
 @pytest.mark.database
-def test_type_of_data_not_null():
+def test__get_type_of_data():
     db = Database()
-    not_null_columns = db.type_of_data_not_null()
+    not_null_columns = db.get_type_of_data()
 
     print(not_null_columns)
 
