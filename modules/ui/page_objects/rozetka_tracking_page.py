@@ -5,14 +5,14 @@ from selenium.webdriver.common.keys import Keys
 
 
 
-class Tracking(BasePage):
+class TrackingPage(BasePage):
     URL = "https://rozetka.com.ua/ua/tracking/"
 
     def __init__(self) -> None:
         super().__init__()
 
     def go_to(self):
-        self.driver.get(Tracking.URL)
+        self.driver.get(TrackingPage.URL)
     
     def tracking(self, number):
 

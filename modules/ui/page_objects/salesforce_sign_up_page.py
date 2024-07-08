@@ -4,14 +4,14 @@ from selenium.webdriver.support.ui import Select
 
 
 
-class SignUpSalesforce(BasePage):
+class SignUpSalesforcePage(BasePage):
     URL = "https://www.salesforce.com/eu/form/demo/overview-demo/?d=pb"
 
     def __init__(self) -> None:
         super().__init__()
 
     def go_to(self):
-        self.driver.get(SignUpSalesforce.URL)
+        self.driver.get(SignUpSalesforcePage.URL)
 
     def enter_contact_data(
         self, first_name, last_name, job_title, email, company, phone

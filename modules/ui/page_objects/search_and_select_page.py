@@ -1,17 +1,17 @@
 from modules.ui.page_objects.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-import time
 
 
-class SearchAndSelect(BasePage):
+
+class SearchAndSelectPage(BasePage):
     URL = "https://rozetka.com.ua/ua/search/"
 
     def __init__(self) -> None:
         super().__init__()
 
     def go_to(self):
-        self.driver.get(SearchAndSelect.URL)
+        self.driver.get(SearchAndSelectPage.URL)
 
     def input_products_for_search_box(self, product_name):
 
